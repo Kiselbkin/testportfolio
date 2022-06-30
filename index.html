@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+        <!--=============== REMIX ICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>Dmitiy-Portfolio</title>
+
+        <base target="_blank">
+    </head>
+    <body>
+        <!--=============== HEADER ===============-->
+        <header class="profile container">
+            <!-- Theme button -->
+            <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+            <i class="header-item-lang-ru">
+                <button class="translate" id="ru">
+                  <img src="assets/img/ru.png" class="img-ru" alt=""/>
+                </button>
+            </i>
+            <i class="header-item-lang-en">
+                <button class="translate active-en" id="en">
+                  <img src="assets/img/en.png" class="img-en" alt=""/>
+                </button>
+            </i>
+
+
+            <div class="profile__container grid">
+                <div class="profile__data">
+                    <div class="profile__border">
+                        <div class="profile__perfil">
+                            <img src="assets/img/perfil.png" alt="">
+                        </div>
+                    </div>
+
+                    <h2 class="profile__name lang" key="name">Dmitriy Novoseletsky</h2>
+                    <h3 class="profile__profession lang" key="special">Motion Designer</h3>
+
+                    <ul class="profile__social">
+                        <a href="https://www.instagram.com/kiselbkin/" target="_blank" class="profile__social-link">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="https://www.behance.net/kiselb" target="_blank" class="profile__social-link">
+                            <i class="ri-behance-line"></i>
+                        </a>
+                        <a href="https://t.me/Kiselb" target="_blank" class="profile__social-link">
+                            <i class="ri-telegram-line"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCk0SlLImxwBUck3KUs_QC-g" target="_blank" class="profile__social-link">
+                            <i class="ri-youtube-line"></i>
+                        </a>
+                        <a href="mailto:mrkisle@gmail.com" target="_blank" class="profile__social-link">
+                            <i class="ri-mail-send-line"></i>
+                        </a>
+                         <a href="https://www.google.ru/maps/place/%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B4%D0%B0%D1%80,+%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B4%D0%B0%D1%80%D1%81%D0%BA%D0%B8%D0%B9+%D0%BA%D1%80%D0%B0%D0%B9/@45.0578614,38.9276344,12z/data=!3m1!4b1!4m5!3m4!1s0x40f04564714535b3:0xf720794f56c4beb6!8m2!3d45.036035!4d38.9745706" target="_blank" class="profile__social-link">
+                            <i class="ri-compass-3-line"></i>
+                        </a>
+                        <a href="https://discordapp.com/users/247346628019748865" target="_blank" class="profile__social-link">
+                            <i class="ri-discord-fill"></i>
+                        </a>
+
+                    </ul>
+                </div>
+
+                <div class="profile__info grid">
+                    <div class="profile__info-group">
+                        <h3 class="profile__info-number">4</h3>
+                        <p class="profile__info-description">
+                            <a class="lang" key="years1">Years of</a> <br> <a class="lang" key="years2">work</a>
+                        </p>
+                    </div>
+                    <div class="profile__info-group">
+                        <h3 class="profile__info-number">60</h3>
+                        <p class="profile__info-description">
+                            <a class="lang" key="project1">Completed</a> <br> <a class="lang" key="project2">projects</a>
+                        </p>
+                    </div>
+                    <div class="profile__info-group">
+                        <h3 class="profile__info-number">15</h3>
+                        <p class="profile__info-description">  <a class="lang" key="envato1">Templates</a> <br> <a class="lang" key="envato2">on Envato</a>
+                    </div>
+                </div>
+
+                <div class="profile__buttons">
+                    <!-- Insert your CV -->
+                    <a download="" href="assets/pdf/CV.pdf" class="button lang" key="CV">
+                        Download CV <i class="ri-download-line"></i>
+                    </a>
+
+                    <div class="profile__buttons-small">
+                        <!-- Insert a real number plus country code -->
+                        <a href="https://t.me/Kiselb" target="_blank" class="button button__small button__gray">
+                            <i class="ri-telegram-line"></i>
+                        </a>
+                        <!-- Insert your brand name or profile -->
+                        <a href="mailto:mrkisle@gmail.com" target="_blank" class="button button__small button__gray">
+                            <i class="ri-mail-open-line"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!--=============== MAIN ===============-->
+        <main class="main">
+            <section class="filters container">
+                <!--=============== FILTERS TABS ===============-->
+                <ul class="filters__content">
+                    <button class="filters__button filter-tab-active lang" data-target="#projects" id='projecttab'key='tab1'>
+                        Projects
+                    </button>
+                    <button class="filters__button lang" data-target="#skills" key='tab2'>
+                        Skills
+                    </button>
+                </ul>
+                <div class="filters__sections">
+
+                    <!--=============== ONLYONECAT ===============-->
+                    <div class="projects__content grid filters__active" data-content  id="projects">
+                          <article class="projects__card"  data-target="#twodAnimation">
+                              <img src="assets/img/project13.webp" alt="" class="projects__img">
+
+                              <div class="cat_model2">
+                              </div>
+
+                              <div class="cat_model">
+                                  <div>
+                                      <!-- <span class="projects__subtitle">1</span> -->
+                                      <h3 class="projects__title lang" key='2d'>2D Animation</h3>
+                                      <a key ='click' class="choose lang">Click</a>
+
+
+                                  </div>
+                              </div>
+                          </article>
+                          <article class="projects__card"  data-target="#threedAnimation">
+                              <img src="assets/img/3dproject.webp" alt="" class="projects__img">
+
+                              <div class="cat_model2">
+                              </div>
+
+                              <div class="cat_model">
+                                  <div>
+                                      <!-- <span class="projects__subtitle">1</span> -->
+                                      <h3 key='3d' class="projects__title lang">3D Animation</h3>
+                                      <a key = 'click' class="choose lang">Click</a>
+
+
+                                  </div>
+                              </div>
+                          </article>
+                          <article class="projects__card"  data-target="#Music">
+                              <img src="assets/img/project1.webp" alt="" class="projects__img">
+
+                              <div class="cat_model2">
+                              </div>
+
+                              <div class="cat_model">
+                                  <div>
+                                      <!-- <span class="projects__subtitle">1</span> -->
+                                      <h3 key ='music' class="projects__title lang">Music visualization</h3>
+                                      <a key = 'click' class="choose lang">Click</a>
+                                       <!-- class="projects__button button button__small"> -->
+
+
+                                  </div>
+                              </div>
+                          </article>
+                          <article class="projects__card"  data-target="#Other">
+                              <img src="assets/img/other.webp" alt="" class="projects__img">
+
+                              <div class="cat_model2">
+                              </div>
+
+                              <div class="cat_model">
+                                  <div>
+                                      <h3 key ='other' class="projects__title lang">Other</h3>
+                                      <a key='click' class="choose lang">Click</a>
+
+
+                                  </div>
+                              </div>
+                          </article>
+                    </div>
+
+                    <!--=============== PROJECTS ===============-->
+                  <div class="projects__content grid" data-content id="Music">
+                        <article class="projects__card">
+                            <img src="assets/img/project1.webp" alt="" class="projects__img">
+
+                            <div class="projects__modal2">
+                                <div>
+                                <video src="assets/img/gif1.webm" type="video/webm" loop autoplay muted alt="" class="projects__img">
+                            </div>
+                            </div>
+
+                            <div class="projects__modal">
+                                <div>
+                                    <span class="projects__subtitle">Animation</span>
+                                    <h3 class="projects__title_cat">Music visualization</h3>
+                                    <a href="https://www.youtube.com/watch?v=kww3HhJFcOs" class="projects__button button button__small">
+                                        <i class="ri-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="projects__card">
+                            <img src="assets/img/project2.webp" alt="" class="projects__img">
+
+
+                            <div class="projects__modal2">
+                                <div>
+                                <video src="assets/img/gif2.webm" type="video/webm" loop autoplay muted alt="" class="projects__img">
+                            </div>
+                            </div>
+
+                            <div class="projects__modal">
+                                <div>
+                                    <span class="projects__subtitle">Animation</span>
+                                    <h3 class="projects__title_cat">Music visualization</h3>
+                                    <a href="https://www.youtube.com/watch?v=efiRRZH8BJE" class="projects__button button button__small">
+                                        <i class="ri-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="projects__card">
+                            <img src="assets/img/project5.webp" alt="" class="projects__img">
+
+                            <div class="projects__modal2">
+                                <div>
+                                <video src="assets/img/gif5.webm" type="video/webm" loop autoplay muted alt="" class="projects__img">
+                            </div>
+                            </div>
+
+                            <div class="projects__modal">
+                                <div>
+                                    <span class="projects__subtitle">Animation</span>
+                                    <h3 class="projects__title_cat">Typography under beat</h3>
+                                    <a href="https://youtu.be/qaKPcjW9EjY" class="projects__button button button__small">
+                                        <i class="ri-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                  </div>
+                  <div class="projects__content grid" data-content id="twodAnimation">
+                        <article class="projects__card">
+                            <img src="assets/img/project13.webp" alt="" class="projects__img">
+
+                            <div class="projects__modal2">
+                                <div>
+                                <video src="assets/img/gif13.webm" type="video/webm" loop autoplay muted alt="" class="projects__img">
+                            </div>
+                            </div>
+
+                            <div class="projects__modal">
+                                <div>
+                                    <span class="projects__subtitle">Animation</span>
+                                    <h3 class="projects__title_cat">NFT Promo</h3>
+                                    <a href="https://youtu.be/LQamTpyjm-w" class="projects__button button button__small">
+                                        <i class="ri-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="projects__card">
+                            <img src="assets/img/project8.webp" alt="" class="projects__img">
+
+                            <div class="projects__modal2">
+                                <div>
+                                <video src="assets/img/gif8.webm" type="video/webm" loop autoplay muted alt="" class="projects__img">
+                            </div>
+                            </div>
+
+                            <div class="projects__modal">
+                                <div>
+                                    <span class="projects__subtitle">Animation</span>
+                                    <h3 class="projects__title_cat">Social Media</h3>
+                                    <a href="https://youtu.be/zMMkPQIW3Bc" class="projects__button button button__small">
+                                        <i class="ri-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="projects__card">
+                            <img src="assets/img/project3.webp" alt="" class="projects__img">
+
+                            <div class="projects__modal2">
+                                <div>
+                                <video src="assets/img/gif3.webm" type="video/webm" loop autoplay muted alt="" class="projects__img">
+                            </div>
+                            </div>
+
+                            <div class="projects__modal">
+                                <div>
+                                    <span class="projects__subtitle">Animation</span>
+                                    <h3 class="projects__title_cat">HUD Cross</h3>
+                                    <a href="https://youtu.be/MRCBF2N9teI" class="projects__button button button__small">
+                                        <i class="ri-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="projects__card">
+                            <img src="assets/img/project7.webp" alt="" class="projects__img">
+
+                            <div class="projects__modal2">
+                                <div>
+                                <video src="assets/img/gif7.webm" type="video/webm" loop autoplay muted alt="" class="projects__img">
+                            </div>
+                            </div>
+
+                            <div class="projects__modal">
+                                <div>
+                                    <span class="projects__subtitle">Animation</span>
+                                    <h3 class="projects__title_cat">Double expouse</h3>
+                                    <a href="https://youtu.be/gMliI1zCbpo" class="projects__button button button__small">
+                                        <i class="ri-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="projects__card">
+                            <img src="assets/img/project6.webp" alt="" class="projects__img">
+
+                            <div class="projects__modal2">
+                                <div>
+                                <video src="assets/img/gif6.webm" type="video/webm" loop autoplay muted alt="" class="projects__img">
+                            </div>
+                            </div>
+
+                            <div class="projects__modal">
+                                <div>
+                                    <span class="projects__subtitle">Animation</span>
+                                    <h3 class="projects__title_cat">Paralax photo</h3>
+                                    <a href="https://youtu.be/ZyL8-CvnAic" class="projects__button button button__small">
+                                        <i class="ri-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="projects__card">
+                            <img src="assets/img/project9.webp" alt="" class="projects__img">
+
+                            <div class="projects__modal2">
+                                <div>
+                                <video src="assets/img/gif9.webm" type="video/webm" loop autoplay muted alt="" class="projects__img">
+                            </div>
+                            </div>
+
+                            <div class="projects__modal">
+                                <div>
+                                    <span class="projects__subtitle">Animation</span>
+                                    <h3 class="projects__title_cat">Infographic</h3>
+                                    <a href="https://youtu.be/SBBTkbvi9Ao" class="projects__button button button__small">
+                                        <i class="ri-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="projects__card">
+                            <img src="assets/img/project11.webp" alt="" class="projects__img">
+
+                            <div class="projects__modal2">
+                                <div>
+                                <video src="assets/img/gif11.webm" type="video/webm" loop autoplay muted alt="" class="projects__img">
+                            </div>
+                            </div>
+
+                            <div class="projects__modal">
+                                <div>
+                                    <span class="projects__subtitle">Animation</span>
+                                    <h3 class="projects__title_cat">NFT promo</h3>
+                                    <a href="https://youtu.be/9k2ptIeXCYg" class="projects__button button button__small">
+                                        <i class="ri-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="projects__card">
+                            <img src="assets/img/project17.webp" alt="" class="projects__img">
+
+                            <div class="projects__modal2">
+                                <div>
+                                <video src="assets/img/gif15.webm" type="video/webm" loop autoplay muted alt="" class="projects__img">
+                            </div>
+                            </div>
+
+                            <div class="projects__modal">
+                                <div>
+                                    <span class="projects__subtitle">Animation</span>
+                                    <h3 class="projects__title_cat">Abstract post</h3>
+
+                                </div>
+                            </div>
+                        </article>
+
+                  </div>
+                  <div class="projects__content grid" data-content id="Other">
+                    <article class="projects__card2">
+                        <img src="assets/img/Project15.webp" alt="" class="projects__img">
+
+                        <div class="projects__modal2">
+                            <div>
+                            <img src="assets/img/Project15.1.webp" alt="" class="projects__img">
+                        </div>
+                        </div>
+
+                        <div class="projects__modal">
+                            <div>
+                                <span class="projects__subtitle">Logo</span>
+                                <h3 class="projects__title_cat">Translation to vector</h3>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="projects__card2">
+                        <img src="assets/img/Project16.webp" alt="" class="projects__img">
+
+                        <div class="projects__modal2">
+                            <div>
+                            <img src="assets/img/Project16.1.webp" alt="" class="projects__img">
+                        </div>
+                        </div>
+
+                        <div class="projects__modal">
+                            <div>
+                                <span class="projects__subtitle">Logo</span>
+                                <h3 class="projects__title_cat">3D model</h3>
+
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="projects__card2">
+                        <img src="assets/img/Project19.webp" alt="" class="projects__img">
+
+                        <div class="projects__modal2">
+                            <div>
+                            <img src="assets/img/Project19.1.webp" alt="" class="projects__img">
+                        </div>
+                        </div>
+
+                        <div class="projects__modal">
+                            <div>
+                                <span class="projects__subtitle">Logo</span>
+                                <h3 class="projects__title_cat">3D model</h3>
+
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="projects__card2">
+                        <img src="assets/img/Project20.webp" alt="" class="projects__img">
+
+                        <div class="projects__modal2">
+                            <div>
+                            <img src="assets/img/Project20.webp" alt="" class="projects__img">
+                        </div>
+                        </div>
+
+                        <div class="projects__modal">
+                            <div>
+                                <span class="projects__subtitle">3D render</span>
+                                <h3 class="projects__title_cat">Project visualization</h3>
+                                <a href="https://www.behance.net/gallery/122696153/Dolce-Cubano-Social-Media-Toolkit" class="projects__button button button__small">
+                                    <i class="ri-link"></i>
+                                </a>
+
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- <article class="projects__card">
+                            <img src="assets/img/project12.webp" alt="" class="projects__img">
+
+                            <div class="projects__modal2">
+                                <div>
+                                <video src="assets/img/gif12.webm" type="video/webm" loop autoplay muted alt="" class="projects__img">
+                            </div>
+                            </div>
+
+                            <div class="projects__modal">
+                                <div>
+                                    <span class="projects__subtitle">Background</span>
+                                    <h3 class="projects__title_cat"> Now expouse</h3>
+                                    <a href="https://youtu.be/97lqnDaQ2UI" class="projects__button button button__small">
+                                        <i class="ri-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article> -->
+
+
+                  </div>
+                  <div class="projects__content grid" data-content id="threedAnimation">
+                      <article class="projects__card">
+                        <img src="assets/img/project18.webp" alt="" class="projects__img">
+
+                        <div class="projects__modal2">
+                            <div>
+                            <video src="assets/img/gif16.webm" type="video/webm" loop autoplay muted alt="" class="projects__img">
+                        </div>
+                        </div>
+
+                        <div class="projects__modal">
+                            <div>
+                                <span class="projects__subtitle">Background</span>
+                                <h3 class="projects__title_cat">Animation logo</h3>
+                                <a href="https://youtu.be/XWO0FTc9JMY" class="projects__button button button__small">
+                                    <i class="ri-link"></i>
+                                </a>
+                            </div>
+                        </div>
+                        </article>
+                      <article class="projects__card">
+                          <img src="assets/img/project21.webp" alt="" class="projects__img">
+
+                          <div class="projects__modal2">
+                              <div>
+                              <video src="assets/img/gif21.webm" type="video/webm" loop autoplay muted alt="" class="projects__img">
+                          </div>
+                          </div>
+
+                          <div class="projects__modal">
+                              <div>
+                                  <span class="projects__subtitle">Metaball</span>
+                                  <h3 class="projects__title_cat">for include on site</h3>
+                                  <a href="https://youtu.be/BUbQbP3BN0o" class="projects__button button button__small">
+                                      <i class="ri-link"></i>
+                                  </a>
+                              </div>
+                          </div>
+                          </article>
+
+                  </div>
+
+                    <!--=============== SKILLS ===============-->
+                    <div class="skills__content grid" data-content id="skills">
+                        <div class="skills__area">
+                            <h3 class="skills__title lang" key="core">Core Skills</h3>
+
+                            <div class="skills__box">
+                                <div class="skills__group">
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+
+                                        <div>
+                                            <h3 class="skills__name">After Effects</h3>
+                                            <span class="skills__level lang" key='advanced'>Advanced</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+
+                                        <div>
+                                            <h3 class="skills__name">Premiere Pro</h3>
+                                            <span class="skills__level lang" key='advanced'>Advanced</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+
+                                        <div>
+                                            <h3 class="skills__name">Illustrator</h3>
+                                            <span class="skills__level lang" key='advanced'>Advanced</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="skills__group">
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+
+                                        <div>
+                                            <h3 class="skills__name">Figma</h3>
+                                            <span class="skills__level lang" key='advanced'>Advanced</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+
+                                        <div>
+                                            <h3 class="skills__name">Photoshop</h3>
+                                            <span class="skills__level lang" key="basic">Basic</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+
+                                        <div>
+                                            <h3 class="skills__name">Cinema 4D</h3>
+                                            <span class="skills__level lang" key="inter">Intermediate</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skills__area">
+                            <h3 class="skills__title lang" key='second'>Secondary Skills</h3>
+
+                            <div class="skills__box">
+                                <div class="skills__group">
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+
+                                        <div>
+                                            <h3 class="skills__name">HTML</h3>
+                                            <span class="skills__level lang" key="inter">Intermediate</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+
+                                        <div>
+                                            <h3 class="skills__name">CSS</h3>
+                                            <span class="skills__level lang" key="inter">Intermediate</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+
+                                        <div>
+                                            <h3 class="skills__name">Javascript</h3>
+                                            <span class="skills__level lang" key="basic">Basic</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="skills__group">
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+
+                                        <div>
+                                            <h3 class="skills__name">Excel</h3>
+                                            <span class="skills__level lang" key="inter">Intermediate</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+
+                                        <div>
+                                            <h3 class="skills__name">Marvelous D.</h3>
+                                            <span class="skills__level lang" key="inter">Intermediate</span>
+                                        </div>
+                                    </div>
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+
+                                        <div>
+                                            <h3 class="skills__name">Tilda</h3>
+                                            <span class="skills__level lang" key='advanced'>Advanced</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--=============== Back ===============-->
+
+                    <!-- <ul class="back_main" id='tableft'>
+                    <button class="back_button lang" key='back'>
+                        Back
+                    </button> -->
+                </div>
+            </section>
+        </main>
+
+
+
+        <!--=============== FOOTER ===============-->
+        <footer class="footer container">
+            <span class="footer__copy lang" key="thank">
+                &#169; Thanks for watching
+            </span>
+        </footer>
+
+        <!--=============== SCROLLREVEAL ===============-->
+        <script src="assets/js/scrollreveal.min.js"></script>
+        <script src="assets/js/lang.js" ></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+        <!--=============== CDN ===============-->
+
+    </body>
+</html>
